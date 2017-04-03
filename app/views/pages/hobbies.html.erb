@@ -1,14 +1,71 @@
 <body style="background-color: #181818">
   <div class="" style="margin: 20px;">
     <div class=" col-md-12" style="background-color: #181818;">
+      
       <h1 class="lead" style="color: white; font-size: 60px">
-        Hobbies
+        Photography
       </h1>   
       <div class="col-sm-12 panel-group" id="accordion">
         <div class="panel" style="background-color: #181818;">
           
+          <div class="col-sm-12">
+            <% @photos.each do |photo| %>
+            <div class="col-lg-3 col-md-4 col-xs-6 collapse-group" style="margin-bottom: 0px; overflow: hidden">
+              <a class="text-center" data-parent="#accordion" data-toggle="collapse" data-target="#collapse_<%= photo.id %>">
+              <img style="width: 90%" src="<%= photo.imageURL%>"> 
+              </a>
+            </div>
+            <% end %>
+          </div>
+          
+          <% @photos.each do |photo| %> 
+          <div class="col-sm-4 collapse" id="collapse_<%= photo.id%>" style="color: white">
+            <div class="display-3 lead text-center"><%= photo.title%></div>
+            <div>
+              <%= photo.taken %>
+            </div>
+          </div>
+          <% end %>
+
         </div>
       </div>
+
+
+       <div id="spacer" class="col-sm-12"></div>
+
+
+      <h1 class="lead" style="color: white; font-size: 60px">
+        Building Bikes
+      </h1>
+
+      <div class="col-sm-12 panel-group" id="accordion2">
+        <div class="panel" style="background-color: #181818;">
+
+          <div class="col-sm-12">
+            <% @bikes.each do |bike| %>
+            <div class="col-lg-3 col-md-4 col-xs-6 collapse-group" style="margin-bottom: 0px; overflow: hidden">
+              <a class="text-center" data-parent="#accordion2" data-toggle="collapse" data-target="#collapse2_<%= bike.id %>">
+              <img style="width: 90%" src="<%= bike.imageURL%>"> 
+              </a>
+            </div>
+            <% end %>
+          </div>
+
+          <% @bikes.each do |bike| %> 
+          <div class="col-sm-4 collapse" id="collapse_<%= bike.id%>" style="color: white">
+            <div class="display-3 lead text-center"><%= bike.name%></div>
+            <div>
+              <%= bike.buildDate %>
+            </div>
+          </div>
+          <% end %>
+       
+
+        </div>
+      </div>
+
+
+
     </div>
   </div>
 </body>

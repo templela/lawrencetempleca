@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   get 'hobbies' => 'pages#hobbies'
   get 'contact' => 'pages#contact'
   get 'experience' => 'pages#experience'
+  get 'academics' => 'pages#academics'
 
 end

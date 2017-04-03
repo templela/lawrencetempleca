@@ -9,7 +9,7 @@
           
           <div class="col-sm-8">
             <% @projects.each do |project| %>
-            <div class="col-lg-3 col-md-4 col-xs-6 collapse-group" style="margin-bottom: 50px;">
+            <div class="col-lg-3 col-md-4 col-xs-6 collapse-group" style="margin-bottom: 0px; width: 210px; height: 210px; overflow: hidden">
               <a class="text-center" data-parent="#accordion" data-toggle="collapse" data-target="#<%= project.id %>">
               <img style="width: 90%" src="<%= project.imageURL%>"> 
               </a>
@@ -20,11 +20,12 @@
           <% @projects.each do |project| %> 
           <div class="col-sm-4 collapse" id="<%= project.id%>" style="color: white">
             <div class="display-3 lead text-center"><%= project.title%></div>
-            <div class="lead" style="font-size: 16px">
-              FROM:  <%= project.startDate %>
-              <br>
-              UNTIL: <%= project.endDate %>
-              <br>
+            <div class="lead text-center" style="font-size: 16px">
+              <%= project.startDate.strftime('%B %Y') %>
+              to
+              <%= project.endDate.strftime('%B %Y') %>
+            </div>
+            <div>
               <%= project.description %>
             </div>
           </div>

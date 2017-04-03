@@ -1,14 +1,104 @@
 <body style="background-color: #181818">
   <div class="" style="margin: 20px;">
     <div class=" col-md-12" style="background-color: #181818;">
+      
       <h1 class="lead" style="color: white; font-size: 60px">
-        Experience
+        Work
       </h1>   
       <div class="col-sm-12 panel-group" id="accordion">
         <div class="panel" style="background-color: #181818;">
           
+          <div class="col-sm-8">
+            <% @experiences.each do |experience| %>
+            <div class="col-lg-3 col-md-4 col-xs-6 collapse-group" style="margin-bottom: 0px; width: 210px; height: 210px; overflow: hidden">
+              <a class="text-center" data-parent="#accordion" data-toggle="collapse" data-target="#collapse_<%= experience.id %>">
+              <img style="width: 90%" src="<%= experience.imageURL%>"> 
+              </a>
+            </div>
+            <% end %>
+          </div>
+          
+          <% @experiences.each do |experience| %> 
+          <div class="col-sm-4 collapse" id="collapse_<%= experience.id%>" style="color: white">
+            <div class="display-3 lead text-center"><%= experience.title%></div>
+            <div class="display-3 lead text-center"><%= experience.company%></div>
+            <div class="lead text-center" style="font-size: 16px">
+              <%= experience.startDate.strftime('%B %Y') %>
+              to
+              <%= experience.endDate.strftime('%B %Y') %>
+            </div>
+            <div>
+              <%= experience.description %>
+            </div>
+
+            <div>
+              <%= experience.technologies %>
+            </div>
+          </div>
+          <% end %>
+
         </div>
       </div>
+
+
+       <div id="spacer" class="col-sm-12"></div>
+
+
+      <h1 class="lead" style="color: white; font-size: 60px">
+        Skills
+      </h1>
+
+      <div class="col-sm-12 panel-group" id="accordion2">
+        <div class="panel" style="background-color: #181818;">
+
+          <div class="col-sm-8">
+            <% @skills.each do |skill| %>
+            <div class="col-lg-3 col-md-4 col-xs-6 collapse-group" style="margin-bottom: 0px; width: 210px; height: 210px; overflow: hidden">
+              <a class="text-center" data-parent="#accordion2" data-toggle="collapse" data-target="#collapse2_<%= skill.id %>">
+              <img style="width: 90%" src="<%= skill.imageURL%>"> 
+              </a>
+            </div>
+            <% end %>
+          </div>
+
+          <% @skills.each do |skill| %> 
+          <div class="col-sm-4 collapse" id="collapse2_<%= skill.id%>" style="color: white">
+            <div class="display-3 lead text-center"><%= skill.name%></div>
+            <div class="lead text-center" style="font-size: 16px">
+
+              <% @yearsKnown = "Known for " << (Date.today.year - skill.learnt.year).to_s << " years "%>
+              <% @yearKnown =  "Known for 1 year "%>
+              <% if ((Date.today.year - skill.learnt.year) != 1)  
+                then @yearText = @yearsKnown 
+                else @yearText = @yearKnown 
+                end %>
+
+              <% @months = Date.today.month - skill.learnt.month %>
+              <% if (@months < 0)
+                then @months = -@months
+                end %> 
+              <% @monthsKnown = (@months).to_s << " months" %>
+              <% @monthKnown =  "1 month" %>
+              <% if ((@months) != 1) 
+                then @monthText = @monthsKnown 
+                else @monthText = @monthKnown 
+                end %>
+
+
+              <%= @yearText << @monthText %>
+            
+            </div>
+            <div>
+              <%= skill.examples %>
+            </div>
+          </div>
+          <% end %>         
+
+        </div>
+      </div>
+
+
+
     </div>
   </div>
 </body>

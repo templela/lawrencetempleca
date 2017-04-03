@@ -10,7 +10,51 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170403042907) do
+ActiveRecord::Schema.define(version: 20170403200016) do
+
+  create_table "awards", force: :cascade do |t|
+    t.string   "name"
+    t.date     "won"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "bikes", force: :cascade do |t|
+    t.string   "name"
+    t.string   "imageURL"
+    t.date     "buildDate"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "courses", force: :cascade do |t|
+    t.string   "courseCode"
+    t.string   "courseName"
+    t.string   "description"
+    t.date     "taken"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "experiences", force: :cascade do |t|
+    t.string   "title"
+    t.string   "company"
+    t.date     "startDate"
+    t.date     "endDate"
+    t.string   "description"
+    t.string   "technologies"
+    t.string   "imageURL"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.string   "imageURL"
+    t.string   "title"
+    t.date     "taken"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "projects", force: :cascade do |t|
     t.string   "title"
@@ -20,6 +64,15 @@ ActiveRecord::Schema.define(version: 20170403042907) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "imageURL"
+  end
+
+  create_table "skills", force: :cascade do |t|
+    t.string   "name"
+    t.string   "examples"
+    t.string   "imageURL"
+    t.date     "learnt"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

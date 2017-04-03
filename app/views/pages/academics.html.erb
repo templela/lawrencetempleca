@@ -1,0 +1,58 @@
+<body style="background-color: #181818">
+  <div class="" style="margin: 20px;">
+    <div class=" col-md-12" style="background-color: #181818;">
+
+      <h1 class="lead" style="color: white; font-size: 60px">
+        Coursework
+      </h1>   
+      <div class="col-sm-12 panel-group" id="accordion">
+        <div class="panel" style="background-color: #181818;">
+          
+          <div class="col-sm-8">
+            <% @courses.each do |course| %>
+            <div class="col-lg-3 col-md-4 col-xs-6 collapse-group" style="margin-bottom: 0px; width: 210px; height: 210px; overflow: hidden">
+              <a class="text-center" data-parent="#accordion" data-toggle="collapse" data-target="#<%= course.id %>">
+                <%= course.courseCode %>
+              </a>
+            </div>
+            <% end %>
+          </div>
+          
+          <% @courses.each do |course| %> 
+          <div class="col-sm-4 collapse" id="<%= course.id%>" style="color: white">
+            <div class="display-3 lead text-center"><%= course.courseName%></div>
+            <div class="lead text-center" style="font-size: 16px">
+              <%= course.taken.strftime('%B %Y') %>
+            </div>
+            <div>
+              <%= course.description %>
+            </div>
+          </div>
+          <% end %>
+
+        </div>
+      </div>
+
+      <h1 class="lead" style="color: white; font-size: 60px">
+        Awards
+      </h1>   
+      <div class="col-sm-12 panel-group" id="accordion">
+        <div class="panel" style="background-color: #181818;">
+          
+          <div class="col-sm-8">
+            <% @awards.each do |award| %>
+            <div class="col-lg-3 col-md-4 col-xs-6 collapse-group" style="margin-bottom: 0px; width: 210px; height: 210px; overflow: hidden">
+              <a class="text-center" data-parent="#accordion" data-toggle="collapse" data-target="#<%= award.id %>">
+                <%= award.name %>
+                <%= award.won %>
+              </a>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</body>
