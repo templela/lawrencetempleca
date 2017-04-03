@@ -18,7 +18,7 @@
           </div>
           
           <% @projects.each do |project| %> 
-          <div class="col-sm-3 collapse" id="<%= project.id%>" style="color: white">
+          <div class="col-sm-4 collapse" id="<%= project.id%>" style="color: white">
             <div class="display-3 lead text-center"><%= project.title%></div>
             <div class="lead" style="font-size: 16px">
               FROM:  <%= project.startDate %>
