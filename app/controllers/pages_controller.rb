@@ -4,4 +4,8 @@ class PagesController < ApplicationController
 
   def contact
   end
+
+  def projects
+    @projects = Project.all
+  end
 end
