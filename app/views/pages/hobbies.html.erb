@@ -1,7 +1,43 @@
+<script>
+//From http://stackoverflow.com/questions/18071046/smooth-scroll-to-specific-div-on-click
+ window.smoothScroll = function(target) {
+     var scrollContainer = target;
+     do { //find scroll container
+         scrollContainer = scrollContainer.parentNode;
+         if (!scrollContainer) return;
+         scrollContainer.scrollTop += 1;
+     } while (scrollContainer.scrollTop == 0);
+ 
+     var targetY = 0;
+     do { //find the top of target relatively to the container
+         if (target == scrollContainer) break;
+         targetY += target.offsetTop;
+     } while (target = target.offsetParent);
+ 
+     scroll = function(c, a, b, i) {
+         i++; if (i > 30) return;
+         c.scrollTop = a + (b - a) / 30 * i;
+         setTimeout(function(){ scroll(c, a, b, i); }, 5);
+     }
+     // start scrolling
+     scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+ }
+ </script>
 <body style="background-color: #181818">
   <div class="" style="margin: 20px;">
     <div class=" col-md-12" style="background-color: #181818;">
-      <h1 class="lead" style="color: white; font-size: 60px">
+      <h1 class="lead" style="color: white; font-size: 50px; margin: 0px">
+        Hobbies
+      </h1>
+      <div class="lead" style="color: white">
+        But blurb here about how some of my projects don't involve coding like
+        <a onclick="smoothScroll(document.getElementById('spacerPhoto'))">photos</a>
+        and
+        <a onclick="smoothScroll(document.getElementById('spacerBikes'))">bikes</a>
+        and
+        <a onclick="smoothScroll(document.getElementById('spacerPaint'))">paintings</a>
+      </div>
+      <h1 class="lead" id="spacerPhoto" style="color: white; font-size: 50px; margin: 0px">
         Photography
       </h1>
       <div class="col-sm-12 panel-group" id="accordion">
@@ -15,12 +51,12 @@
                 </a>
               </div>
               <div class="col-sm-4 collapse" id="collapse_<%= photo.id%>" style="
-                  background: none repeat scroll 0 0 #FFFFFF;
-                  opacity: 0.6;
-                  margin: -78px 0px 0px 0px; 
-                  position: absolute;
-                  width:150px;
-                  height: 60px">
+                background: none repeat scroll 0 0 #FFFFFF;
+                opacity: 0.6;
+                margin: -78px 0px 0px 0px; 
+                position: absolute;
+                width:150px;
+                height: 60px">
                 <div class="display-3 lead text-center" style="margin-bottom: 0px"> <%= photo.title%> </div>
                 <div class="display-4 lead text-center" style="margin-bottom: 0px"> <%= photo.taken %> </div>
               </div>
@@ -29,8 +65,8 @@
           </div>
         </div>
       </div>
-      <div id="spacer" class="col-sm-12"></div>
-      <h1 class="lead" style="color: white; font-size: 60px">
+      <div id="spacerBikes" class="col-sm-12"></div>
+      <h1 class="lead" id="bikes" style="color: white; font-size: 50px; margin: 0px">
         Building and Restoring Bikes
       </h1>
       <div class="col-sm-12 panel-group" id="accordion2">
@@ -44,12 +80,12 @@
                 </a>
               </div>
               <div class="col-sm-4 collapse" id="collapse2_<%= bike.id%>" style="
-                  background: none repeat scroll 0 0 #FFFFFF;
-                  opacity: 0.6;
-                  margin: -78px 0px 0px 0px; 
-                  position: absolute;
-                  width:340px;
-                  height: 60px">
+                background: none repeat scroll 0 0 #FFFFFF;
+                opacity: 0.6;
+                margin: -78px 0px 0px 0px; 
+                position: absolute;
+                width:340px;
+                height: 60px">
                 <div class="display-3 lead text-center" style="margin-bottom: 0px"> <%= bike.name %> </div>
                 <div class="display-4 lead text-center" style="margin-bottom: 0px"> <%= bike.buildDate.strftime('%B %Y') %> </div>
               </div>
@@ -58,7 +94,7 @@
           </div>
         </div>
       </div>
-      <div id="spacer" class="col-sm-12"></div>
+      <div id="spacerPaint" class="col-sm-12"></div>
     </div>
   </div>
 </body>

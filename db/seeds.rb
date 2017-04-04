@@ -247,11 +247,11 @@ Photo.create(
   taken: "01/01/1999")
 
 Bike.create(
-  name: "Pure Kierin Alu, Custom Build",
+  name: "Pure Kierin, Custom",
   imageURL: "http://i.imgur.com/renoaTX.jpg",
   buildDate: "01/03/2017")
 Bike.create(
-  name: "Critical Cycles Hi-Ten, Custom Build",
+  name: "Critical Cycles Hi-Ten",
   imageURL: "http://i.imgur.com/1DGu9Zf.jpg",
   buildDate: "01/01/2017")
 Bike.create(
