@@ -1,3 +1,9 @@
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+</script>
+
 <body style="background-color: #181818">
   <div class="" style="margin: 20px;">
     <div class=" col-md-12" style="background-color: #181818;">
@@ -12,7 +18,7 @@
             <% @experiences.each do |experience| %>
             <div class="col-lg-3 col-md-4 col-xs-6 collapse-group" style="margin-bottom: 0px; width: 210px; height: 210px; overflow: hidden">
               <a class="text-center" data-parent="#accordion" data-toggle="collapse" data-target="#collapse_<%= experience.id %>">
-              <img style="width: 90%" src="<%= experience.imageURL%>"> 
+              <img style="width: 90%" src="<%= experience.imageURL%>" data-toggle="tooltip" data-placement="top" title="Tooltip on top"> 
               </a>
             </div>
             <% end %>

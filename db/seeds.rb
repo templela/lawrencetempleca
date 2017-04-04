@@ -42,45 +42,131 @@ Experience.create(
   title: 'Software Engineer Intern', 
   company: 'Nuance Communications Montreal',
   startDate: '01/01/2016', endDate: '01/04/2016',
-  imageURL: 'https://upload.wikimedia.org/wikipedia/en/thumb/a/a8/Nuance_Communications_logo.svg/1280px-Nuance_Communications_logo.svg.png',
+  imageURL: 'http://i.imgur.com/mcW3Vpc.png',
   technologies: 'Docker, Apache, ETC',
   description: 'Sofware Devd')
 Experience.create(  
   title: 'Software Research Assistant', 
   company: 'Department of Electrical and Computer Engineering, Toronto',
   startDate: '01/04/2015', endDate: '01/09/2015',
-  imageURL: 'http://www.vrg.utoronto.ca/~ngwt/Photos/ECE_logo.jpg',
+  imageURL: 'http://i.imgur.com/mXpHvgd.png',
   technologies: 'Docker, Apache, ETC',
   description: 'Sofware Devd')
 Experience.create(  
-  title: 'EX1 - TIT', 
-  company: 'EX1 - COM',
-  startDate: '01/01/2015', endDate: '01/09/2015',
-  imageURL: 'http://www.innovationfixer.co.uk/sites/default/files/Work-Experience.jpg',
+  title: 'Volunteer Research Assistant', 
+  company: 'University of Toronto - Human Factors and Applied Statistics Lab',
+  startDate: '01/04/2015', endDate: '01/09/2015',
+  imageURL: 'http://i.imgur.com/hPBZfaS.png',
   technologies: 'EX1 - TEC',
   description: 'EX1 - DES')
 
 
 Skill.create(
-  name: 'C++',
-  examples: 'Course Work Here ....',
-  imageURL: 'https://www.brandsoftheworld.com/sites/default/files/styles/logo-thumbnail/public/042014/c_0.png',
+  name: 'C',
+  examples: 'FILL',
+  imageURL: 'http://i.imgur.com/rlooL5k.png',
   learnt: '01/09/2012')
 Skill.create(
-  name: 'SK1 - NAME',
-  examples: 'SK1 - EX',
-  imageURL: 'https://pbs.twimg.com/profile_images/626840703503605760/8IVtV7hS.png',
-  learnt: '01/03/2016')
+  name: 'Java',
+  examples: 'FILL',
+  imageURL: 'http://i.imgur.com/JDUdZcO.png',
+  learnt: '01/09/2011')
 Skill.create(
-  name: 'SK2 - NAME',
-  examples: 'SK2 - EX',
-  imageURL: 'https://pbs.twimg.com/profile_images/626840703503605760/8IVtV7hS.png',
-  learnt: '01/03/2016')
+  name: 'Pyhton',
+  examples: 'FILL',
+  imageURL: 'http://i.imgur.com/L2xVohg.png',
+  learnt: '01/09/2011')
 Skill.create(
-  name: 'SK3 - NAME',
-  examples: 'SK3 - EX',
-  imageURL: 'https://pbs.twimg.com/profile_images/626840703503605760/8IVtV7hS.png',
-  learnt: '01/03/2016')
+  name: 'C++',
+  examples: 'FILL',
+  imageURL: 'http://i.imgur.com/HO9XRLS.png',
+  learnt: '01/09/2013')
+Skill.create(
+  name: 'Git',
+  examples: 'FILL',
+  imageURL: 'http://i.imgur.com/KOcA4ay.png',
+  learnt: '01/09/2013')
+Skill.create(
+  name: 'Docker',
+  examples: 'FILL',
+  imageURL: 'http://i.imgur.com/qTJ2Stq.png',
+  learnt: '01/01/2016')
+Skill.create(
+  name: 'Ruby',
+  examples: 'FILL',
+  imageURL: 'http://i.imgur.com/TSazQAM.png',
+  learnt: '01/09/2016')
+Skill.create(
+  name: 'Rails',
+  examples: 'FILL',
+  imageURL: 'http://i.imgur.com/4i8HclY.png',
+  learnt: '01/09/2016')
+Skill.create(
+  name: 'Javascript',
+  examples: 'FILL',
+  imageURL: 'http://i.imgur.com/cNrYJFn.png',
+  learnt: '01/01/2016')
+Skill.create(
+  name: 'MATLAB',
+  examples: 'FILL',
+  imageURL: 'http://i.imgur.com/e02F5OE.png',
+  learnt: '01/01/2016')
+Skill.create(
+  name: 'SQL',
+  examples: 'FILL',
+  imageURL: 'http://i.imgur.com/lxyfEvE.png',
+  learnt: '01/01/2016')
+Skill.create(
+  name: 'XML/JSON',
+  examples: 'FILL',
+  imageURL: 'http://i.imgur.com/IsHWmij.png',
+  learnt: '01/01/2016')
+Skill.create(
+  name: 'Verilog',
+  examples: 'FILL',
+  imageURL: 'http://i.imgur.com/NMaxMvV.png',
+  learnt: '01/01/2016')
+Skill.create(
+  name: 'Assembly',
+  examples: 'FILL',
+  imageURL: 'http://i.imgur.com/Xc39RI4.png',
+  learnt: '01/01/2016')
+Skill.create(
+  name: 'Shell Scripting',
+  examples: 'FILL',
+  imageURL: 'http://i.imgur.com/KxAllsP.png',
+  learnt: '01/01/2016')
+Skill.create(
+  name: 'Apache + Maven',
+  examples: 'FILL',
+  imageURL: 'http://i.imgur.com/aeeL0fj.png',
+  learnt: '01/01/2016')
+Skill.create(
+  name: 'Tornado',
+  examples: 'FILL',
+  imageURL: 'http://i.imgur.com/6cKaaGv.png',
+  learnt: '01/01/2016')
+Skill.create(
+  name: 'Atlassian/Confluence Dev Suite',
+  examples: 'FILL',
+  imageURL: 'http://i.imgur.com/QAasHfM.png',
+  learnt: '01/01/2016')
+Skill.create(
+  name: 'Photoshop',
+  examples: 'FILL',
+  imageURL: 'http://i.imgur.com/7USb9UQ.png',
+  learnt: '01/01/2016')
+Skill.create(
+  name: 'Linux',
+  examples: 'FILL',
+  imageURL: 'http://i.imgur.com/3LbWJfy.png',
+  learnt: '01/01/2016')
+Skill.create(
+  name: 'Heroku',
+  examples: 'FILL',
+  imageURL: 'http://i.imgur.com/OSDlFwQ.png',
+  learnt: '01/01/2016')
+
 
 
 Course.create(
@@ -125,22 +211,66 @@ Photo.create(
   taken: "27/04/2016")
 Photo.create(
   title: "untitled",
-  imageURL: "http://68.media.tumblr.com/9be6ce4402d3444553e78f1ebd1f0795/tumblr_o6a0soh0jN1qcm9tso1_1280.jpg",
-  taken: "27/04/2016")
+  imageURL: "http://i.imgur.com/FnmTFBP.jpg",
+  taken: "01/01/1999")
 Photo.create(
   title: "untitled",
-  imageURL: "http://68.media.tumblr.com/9be6ce4402d3444553e78f1ebd1f0795/tumblr_o6a0soh0jN1qcm9tso1_1280.jpg",
-  taken: "27/04/2016")
+  imageURL: "http://i.imgur.com/X1U3Fyo.jpg",
+  taken: "01/01/1999")
+Photo.create(
+  title: "untitled",
+  imageURL: "http://i.imgur.com/aRs78jO.jpg",
+  taken: "01/01/1999")
+Photo.create(
+  title: "untitled",
+  imageURL: "http://i.imgur.com/l2TJkTM.jpg",
+  taken: "01/01/1999")
+Photo.create(
+  title: "untitled",
+  imageURL: "http://i.imgur.com/tDWKM92.jpg",
+  taken: "01/01/1999")
+Photo.create(
+  title: "untitled",
+  imageURL: "http://i.imgur.com/IXGA6fK.jpg",
+  taken: "01/01/1999")
+Photo.create(
+  title: "untitled",
+  imageURL: "http://i.imgur.com/PUlLCcD.jpg",
+  taken: "01/01/1999")
+Photo.create(
+  title: "untitled",
+  imageURL: "http://i.imgur.com/5lh0F2w.jpg",
+  taken: "01/01/1999")
+Photo.create(
+  title: "untitled",
+  imageURL: "http://i.imgur.com/W6ILmBL.jpg",
+  taken: "01/01/1999")
 
 Bike.create(
-  name: "PURE",
-  imageURL: "http://i.imgur.com/0wsvbYN.jpg",
+  name: "Pure Kierin Alu, Custom Build",
+  imageURL: "http://i.imgur.com/renoaTX.jpg",
   buildDate: "01/03/2017")
 Bike.create(
-  name: "PURE",
-  imageURL: "http://i.imgur.com/0wsvbYN.jpg",
-  buildDate: "01/03/2017")
+  name: "Critical Cycles Hi-Ten, Custom Build",
+  imageURL: "http://i.imgur.com/1DGu9Zf.jpg",
+  buildDate: "01/01/2017")
 Bike.create(
-  name: "PURE",
-  imageURL: "http://i.imgur.com/0wsvbYN.jpg",
-  buildDate: "01/03/2017")
+  name: "Handpainted Gaspipe Steel, 1970s",
+  imageURL: "http://i.imgur.com/oa7drOv.jpg",
+  buildDate: "01/12/2016")
+Bike.create(
+  name: "Raw Chromoloy Steel, 1980s (RIP)",
+  imageURL: "http://i.imgur.com/xWND76V.jpg",
+  buildDate: "01/09/2016")
+Bike.create(
+  name: "Damco Steel",
+  imageURL: "http://i.imgur.com/KRmBM5y.jpg",
+  buildDate: "01/12/2015")
+Bike.create(
+  name: "Champion Medallion, 1970s",
+  imageURL: "http://i.imgur.com/G5uucqz.jpg",
+  buildDate: "01/05/2016")
+Bike.create(
+  name: "CCM Coursa, 1980s",
+  imageURL: "http://i.imgur.com/wybSK1B.jpg",
+  buildDate: "01/06/2016")

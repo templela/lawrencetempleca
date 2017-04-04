@@ -1,71 +1,64 @@
 <body style="background-color: #181818">
   <div class="" style="margin: 20px;">
     <div class=" col-md-12" style="background-color: #181818;">
-      
       <h1 class="lead" style="color: white; font-size: 60px">
         Photography
-      </h1>   
+      </h1>
       <div class="col-sm-12 panel-group" id="accordion">
         <div class="panel" style="background-color: #181818;">
-          
           <div class="col-sm-12">
             <% @photos.each do |photo| %>
-            <div class="col-lg-3 col-md-4 col-xs-6 collapse-group" style="margin-bottom: 0px; overflow: hidden">
-              <a class="text-center" data-parent="#accordion" data-toggle="collapse" data-target="#collapse_<%= photo.id %>">
-              <img style="width: 90%" src="<%= photo.imageURL%>"> 
-              </a>
+            <div class="col-lg-4 col-md-4 col-xs-6">
+              <div class="collapse-group" style="margin-bottom: 20px; overflow: hidden">
+                <a class="text-center" data-parent="#accordion" data-toggle="collapse" data-target="#collapse_<%= photo.id %>">
+                <img style="width: 90%" src="<%= photo.imageURL%>"> 
+                </a>
+              </div>
+              <div class="col-sm-4 collapse" id="collapse_<%= photo.id%>" style="
+                  background: none repeat scroll 0 0 #FFFFFF;
+                  opacity: 0.6;
+                  margin: -78px 0px 0px 0px; 
+                  position: absolute;
+                  width:150px;
+                  height: 60px">
+                <div class="display-3 lead text-center" style="margin-bottom: 0px"> <%= photo.title%> </div>
+                <div class="display-4 lead text-center" style="margin-bottom: 0px"> <%= photo.taken %> </div>
+              </div>
             </div>
             <% end %>
           </div>
-          
-          <% @photos.each do |photo| %> 
-          <div class="col-sm-4 collapse" id="collapse_<%= photo.id%>" style="color: white">
-            <div class="display-3 lead text-center"><%= photo.title%></div>
-            <div>
-              <%= photo.taken %>
-            </div>
-          </div>
-          <% end %>
-
         </div>
       </div>
-
-
-       <div id="spacer" class="col-sm-12"></div>
-
-
+      <div id="spacer" class="col-sm-12"></div>
       <h1 class="lead" style="color: white; font-size: 60px">
-        Building Bikes
+        Building and Restoring Bikes
       </h1>
-
       <div class="col-sm-12 panel-group" id="accordion2">
         <div class="panel" style="background-color: #181818;">
-
           <div class="col-sm-12">
             <% @bikes.each do |bike| %>
-            <div class="col-lg-3 col-md-4 col-xs-6 collapse-group" style="margin-bottom: 0px; overflow: hidden">
-              <a class="text-center" data-parent="#accordion2" data-toggle="collapse" data-target="#collapse2_<%= bike.id %>">
-              <img style="width: 90%" src="<%= bike.imageURL%>"> 
-              </a>
+            <div class="col-lg-4 col-md-4 col-xs-6">
+              <div class="collapse-group" style="margin-bottom: 20px; overflow: hidden">
+                <a class="text-center" data-parent="#accordion2" data-toggle="collapse" data-target="#collapse2_<%= bike.id %>">
+                <img style="width: 90%" src="<%= bike.imageURL%>"> 
+                </a>
+              </div>
+              <div class="col-sm-4 collapse" id="collapse2_<%= bike.id%>" style="
+                  background: none repeat scroll 0 0 #FFFFFF;
+                  opacity: 0.6;
+                  margin: -78px 0px 0px 0px; 
+                  position: absolute;
+                  width:340px;
+                  height: 60px">
+                <div class="display-3 lead text-center" style="margin-bottom: 0px"> <%= bike.name %> </div>
+                <div class="display-4 lead text-center" style="margin-bottom: 0px"> <%= bike.buildDate.strftime('%B %Y') %> </div>
+              </div>
             </div>
             <% end %>
           </div>
-
-          <% @bikes.each do |bike| %> 
-          <div class="col-sm-4 collapse" id="collapse_<%= bike.id%>" style="color: white">
-            <div class="display-3 lead text-center"><%= bike.name%></div>
-            <div>
-              <%= bike.buildDate %>
-            </div>
-          </div>
-          <% end %>
-       
-
         </div>
       </div>
-
-
-
+      <div id="spacer" class="col-sm-12"></div>
     </div>
   </div>
 </body>
