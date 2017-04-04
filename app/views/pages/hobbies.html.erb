@@ -2,41 +2,45 @@
 <%= stylesheet_link_tag "hobbyImg.css" %>
 
 <body style="background-color: #181818">
-  <div class="" style="margin: 20px;">
-    <div class=" col-md-12" style="background-color: #181818;">
-      <h1 class="lead" style="color: white; font-size: 50px; margin: 0px">
-        Hobbies
-      </h1>
-      <div class="lead" style="color: white">
-        But blurb here about how some of my projects don't involve coding like
-        <a onclick="smoothScroll(document.getElementById('spacerPhoto'))">photos</a>
-        and
-        <a onclick="smoothScroll(document.getElementById('spacerBikes'))">bikes</a>
-        and
-        <a onclick="smoothScroll(document.getElementById('spacerPaint'))">paintings</a>
-      </div>
-
-      <h1 class="lead" id="spacerPhoto" style="color: white; font-size: 50px; margin: 0px">
-        Photography
-      </h1>
-      <div class="col-sm-12">
-        <div class="" style="background-color: #181818;">
-          <div class="col-sm-12">
-            <% @photos.each do |photo| %>
-            <div class="hobbyImg col-lg-4 col-md-4 col-xs-6" style="margin-bottom: 20px; overflow: hidden">
-              <a class="text-center">
-                <img style="width: 100%" src="<%= photo.imageURL%>"> 
-              </a>
-              <div class="col-sm-4 hobbyImg_hover">
-                <div class="display-3 lead text-center" style="margin-bottom: 0px"> <%= photo.title%> </div>
-                <div class="display-4 lead text-center" style="margin-bottom: 0px"> <%= photo.taken %> </div>
-              </div>
-            </div>
-            <% end %>
-          </div>
+  <div style="margin: 20px;">
+    <div class="col-md-12" style="background-color: #181818;">
+      
+      <div id="hobbiesHeader" class="col-sm-12"> 
+        <h1 class="lead" style="color: white; font-size: 50px; margin: 0px">
+          Hobbies
+        </h1>
+        <div class="lead" style="color: #888888; margin-left: 20px">
+          But blurb here about how some of my projects don't involve coding like
+          <a onclick="smoothScroll(document.getElementById('spacerPhoto'))">photos</a>
+          and
+          <a onclick="smoothScroll(document.getElementById('spacerBikes'))">bikes</a>
+          and
+          <a onclick="smoothScroll(document.getElementById('spacerPaint'))">paintings</a>
         </div>
       </div>
 
+      <div id="photos">
+        <h1 class="lead col-sm-12" id="spacerPhoto" style="color: white; font-size: 50px; margin: 0px">
+          Photography
+        </h1>
+        <div class="col-sm-12">
+          <div class="" style="background-color: #181818;">
+            <div class="col-sm-12">
+              <% @photos.each do |photo| %>
+              <div class="hobbyImg col-lg-4 col-md-4 col-xs-6" style="margin-bottom: 20px; overflow: hidden">
+                <a class="text-center">
+                  <img style="width: 100%" src="<%= photo.imageURL%>"> 
+                </a>
+                <div class="col-sm-4 hobbyImg_hover">
+                  <div class="display-3 lead text-center" style="margin-bottom: 0px"> <%= photo.title%> </div>
+                  <div class="display-4 lead text-center" style="margin-bottom: 0px"> <%= photo.taken %> </div>
+                </div>
+              </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <h1 class="lead" id="spacerBikes" style="color: white; font-size: 50px; margin: 0px">
          Building and Restoring Bikes

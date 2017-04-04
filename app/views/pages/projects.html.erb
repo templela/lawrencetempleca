@@ -1,46 +1,49 @@
 <%= javascript_include_tag "fade.js" %>
 
 <body style="background-color: #181818">
-  <div class="" style="margin: 20px;">
-    <div class=" col-md-12" style="background-color: #181818;">
-      <h1 class="lead" style="color: white; font-size: 50px; margin: 0px">
-        Projects
-      </h1>   
-      <div class="lead" style="color: white">
-        But blurb here about the kinds of projects I do
-      </div>
-    
-      <div id="mouseover1" style="padding-bottom: 20px">
-        <i style="color: #181818">s</i>
-        <i class="col-lg-3 col-md-4 col-xs-6" style="color: #666666; padding-left: 30px" id='fade'>Click for more information</i>
-      </div>
-      <div class="col-sm-12 panel-group" id="accordion">
-        <div class="panel" style="background-color: #181818;">
-          
-          <div class="col-sm-8">
-            <% @projects.each do |project| %>
-            <div class="col-lg-3 col-md-4 col-xs-6 collapse-group" style="margin-bottom: 0px; width: 210px; height: 210px; overflow: hidden">
-              <a class="text-center" data-parent="#accordion" data-toggle="collapse" data-target="#<%= project.id %>">
-              <img style="width: 95%" src="<%= project.imageURL%>"> 
-              </a>
+  <div style="margin: 20px;">
+    <div class="col-sm-12" style="background-color: #181818;">
+      
+      <div id="projects">
+        <div id="projectsHeader" class="col-sm-12">
+          <h1 class="lead" style="color: white; font-size: 50px; margin: 0px">
+            Projects
+          </h1>   
+          <div class="lead" style="color: #888888; margin-left: 20px">
+            But blurb here about the kinds of projects I do
+          </div>
+          <div id="mouseover1" style="padding-bottom: 20px">
+            <i style="color: #181818">s</i>
+            <i class="col-lg-3 col-md-4 col-xs-6" style="color: #666666; padding-left: 20px" id='fade'>Click for more information</i>
+          </div>
+        </div>
+        <div class="panel-group" id="accordion">
+          <div class="panel" style="background-color: #181818;"> 
+            <div class="col-sm-8">
+              <% @projects.each do |project| %>
+              <div class="col-lg-3 col-md-4 col-xs-6 collapse-group" style="margin-bottom: 0px; width: 210px; height: 210px; overflow: hidden">
+                <a class="text-center" data-parent="#accordion" data-toggle="collapse" data-target="#<%= project.id %>">
+                <img style="width: 95%" src="<%= project.imageURL%>"> 
+                </a>
+              </div>
+              <% end %>
+            </div>
+            
+            <% @projects.each do |project| %> 
+            <div class="col-sm-4 collapse" id="<%= project.id%>" style="color: white">
+              <div class="display-3 lead text-center"><%= project.title%></div>
+              <div class="lead text-center" style="font-size: 16px">
+                <%= project.startDate.strftime('%B %Y') %>
+                to
+                <%= project.endDate.strftime('%B %Y') %>
+              </div>
+              <div>
+                <%= project.description %>
+              </div>
             </div>
             <% end %>
-          </div>
-          
-          <% @projects.each do |project| %> 
-          <div class="col-sm-4 collapse" id="<%= project.id%>" style="color: white">
-            <div class="display-3 lead text-center"><%= project.title%></div>
-            <div class="lead text-center" style="font-size: 16px">
-              <%= project.startDate.strftime('%B %Y') %>
-              to
-              <%= project.endDate.strftime('%B %Y') %>
-            </div>
-            <div>
-              <%= project.description %>
-            </div>
-          </div>
-          <% end %>
 
+          </div>
         </div>
       </div>
     </div>
