@@ -1,80 +1,75 @@
-<script>
+<%= javascript_include_tag "scroll.js" %> 
+<%= javascript_include_tag "fade1.js" %> 
+<%= javascript_include_tag "fade2.js" %> 
 
-//From http://stackoverflow.com/questions/18071046/smooth-scroll-to-specific-div-on-click
- window.smoothScroll = function(target) {
-     var scrollContainer = target;
-     do { //find scroll container
-         scrollContainer = scrollContainer.parentNode;
-         if (!scrollContainer) return;
-         scrollContainer.scrollTop += 1;
-     } while (scrollContainer.scrollTop == 0);
- 
-     var targetY = 0;
-     do { //find the top of target relatively to the container
-         if (target == scrollContainer) break;
-         targetY += target.offsetTop;
-     } while (target = target.offsetParent);
- 
-     scroll = function(c, a, b, i) {
-         i++; if (i > 30) return;
-         c.scrollTop = a + (b - a) / 30 * i;
-         setTimeout(function(){ scroll(c, a, b, i); }, 5);
-     }
-     // start scrolling
-     scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
- }
- </script>
  <body style="background-color: #181818">
-  <div class="" style="margin: 20px;">
-    <div class=" col-md-12" style="background-color: #181818;">
-      <h1 class="lead" style="color: white; font-size: 50px; margin: 0px">
-        Work
-      </h1>
-      <div class="lead" style="color: white">
-        But blurb here about how I work
-      </div>
-      <div class="col-sm-12 panel-group" id="accordion">
-        <div class="panel" style="background-color: #181818;">
-          <div class="col-sm-8">
-            <% @experiences.each do |experience| %>
-            <div class="col-lg-3 col-md-4 col-xs-6 collapse-group" style="margin-bottom: 0px; width: 210px; height: 210px; overflow: hidden">
-              <a class="text-center" data-parent="#accordion" data-toggle="collapse" data-target="#collapse_<%= experience.id %>">
-              <img style="width: 90%" src="<%= experience.imageURL%>" data-toggle="tooltip" data-placement="top" title="Tooltip on top"> 
-              </a>
+  <div style="margin: 20px;">
+    <div class="col-sm-12" style="background-color: #181818;">
+ 
+      <div id="work">
+        <div id="workHeader" class="col-sm-12">
+          <h1 class="lead" style="color: white; font-size: 50px; margin: 0px">
+            Work
+          </h1>
+          <div class="lead" style="color: white; margin-left: 20px">
+            But blurb here about how I work
+          </div>
+          <div id="mouseover1" style="padding-bottom: 20px">
+            <i style="color: #181818">!</i>
+            <i class="col-lg-3 col-md-4 col-xs-6" style="color: #666666; padding-left: 20px" id='fade1'>Click for more information</i>
+          </div>
+        </div>
+        <div class="panel-group" id="accordion1">
+          <div class="panel" style="background-color: #181818;">
+            <div class="col-sm-8">
+              <% @experiences.each do |experience| %>
+              <div class="col-lg-3 col-md-4 col-xs-6 collapse-group" style="margin-bottom: 0px; width: 210px; height: 210px; overflow: hidden">
+                <a class="text-center" data-parent="#accordion1" data-toggle="collapse" data-target="#collapse_<%= experience.id %>">
+                <img style="width: 95%" src="<%= experience.imageURL%>" data-toggle="tooltip" data-placement="top"> 
+                </a>
+              </div>
+              <% end %>
+            </div>
+            <% @experiences.each do |experience| %> 
+            <div class="col-sm-4 collapse" id="collapse_<%= experience.id%>" style="color: white">
+              <div class="display-3 lead text-center"><%= experience.title%></div>
+              <div class="display-3 lead text-center"><%= experience.company%></div>
+              <div class="lead text-center" style="font-size: 16px">
+                <%= experience.startDate.strftime('%B %Y') %>
+                to
+                <%= experience.endDate.strftime('%B %Y') %>
+              </div>
+              <div>
+                <%= experience.description %>
+              </div>
+              <div>
+                <%= experience.technologies %>
+              </div>
             </div>
             <% end %>
           </div>
-          <% @experiences.each do |experience| %> 
-          <div class="col-sm-4 collapse" id="collapse_<%= experience.id%>" style="color: white">
-            <div class="display-3 lead text-center"><%= experience.title%></div>
-            <div class="display-3 lead text-center"><%= experience.company%></div>
-            <div class="lead text-center" style="font-size: 16px">
-              <%= experience.startDate.strftime('%B %Y') %>
-              to
-              <%= experience.endDate.strftime('%B %Y') %>
-            </div>
-            <div>
-              <%= experience.description %>
-            </div>
-            <div>
-              <%= experience.technologies %>
-            </div>
-          </div>
-          <% end %>
-        </div>
+        </div>  
+        <div id="spacer" class="col-sm-12"></div>
       </div>
-      <div id="spacer" class="col-sm-12"></div>
+
+
       <div id="skills">
-        <h1 class="lead" style="color: white; font-size: 50px">
-          Skills
-        </h1>
-        <div class="col-sm-12 panel-group" id="accordion2">
+        <div class="col-sm-12">
+          <h1 class="lead" style="color: white; font-size: 50px">
+            Skills
+          </h1>
+          <div id="mouseover2" style="padding-bottom: 20px">
+            <i style="color: #181818">s</i>
+            <i class="col-lg-3 col-md-4 col-xs-6" style="color: #666666; padding-left: 20px" id='fade2'>Click for more information</i>
+          </div>
+        </div>
+        <div class="panel-group" id="accordion2">
           <div class="panel" style="background-color: #181818;">
             <div class="col-sm-8">
               <% @skills.each do |skill| %>
               <div class="col-lg-3 col-md-4 col-xs-6 collapse-group" style="margin-bottom: 0px; width: 210px; height: 210px; overflow: hidden">
                 <a class="text-center" data-parent="#accordion2" data-toggle="collapse" data-target="#collapse2_<%= skill.id %>">
-                <img onclick="smoothScroll(document.getElementById('spacer'))" style="width: 90%" src="<%= skill.imageURL%>"> 
+                <img onclick="smoothScroll(document.getElementById('spacer'))" style="width: 95%" src="<%= skill.imageURL%>"> 
                 </a>
               </div>
               <% end %>
@@ -104,12 +99,13 @@
               <div>
                 <%= skill.examples %>
               </div>
-              <img style="width: 90%; margin-top:25px" src="<%= skill.imageURL%>">
+              <img style="width: 90%; margin-top:25px;" src="<%= skill.imageURL%>">
             </div>
             <% end %>         
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </body>

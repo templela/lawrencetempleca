@@ -1,28 +1,5 @@
-<script>
-//From http://stackoverflow.com/questions/18071046/smooth-scroll-to-specific-div-on-click
- window.smoothScroll = function(target) {
-     var scrollContainer = target;
-     do { //find scroll container
-         scrollContainer = scrollContainer.parentNode;
-         if (!scrollContainer) return;
-         scrollContainer.scrollTop += 1;
-     } while (scrollContainer.scrollTop == 0);
- 
-     var targetY = 0;
-     do { //find the top of target relatively to the container
-         if (target == scrollContainer) break;
-         targetY += target.offsetTop;
-     } while (target = target.offsetParent);
- 
-     scroll = function(c, a, b, i) {
-         i++; if (i > 30) return;
-         c.scrollTop = a + (b - a) / 30 * i;
-         setTimeout(function(){ scroll(c, a, b, i); }, 5);
-     }
-     // start scrolling
-     scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
- }
- </script>
+<%= javascript_include_tag "scroll.js" %>
+
 <body style="background-color: #181818">
   <div class="" style="margin: 20px;">
     <div class=" col-md-12" style="background-color: #181818;">
@@ -40,14 +17,15 @@
       <h1 class="lead" id="spacerPhoto" style="color: white; font-size: 50px; margin: 0px">
         Photography
       </h1>
-      <div class="col-sm-12 panel-group" id="accordion">
+
+      <div class="col-sm-12 panel-group" id="accordion1">
         <div class="panel" style="background-color: #181818;">
           <div class="col-sm-12">
             <% @photos.each do |photo| %>
             <div class="col-lg-4 col-md-4 col-xs-6">
               <div class="collapse-group" style="margin-bottom: 20px; overflow: hidden">
-                <a class="text-center" data-parent="#accordion" data-toggle="collapse" data-target="#collapse_<%= photo.id %>">
-                <img style="width: 90%" src="<%= photo.imageURL%>"> 
+                <a class="text-center" data-parent="#accordion1" data-toggle="collapse" data-target="#collapse_<%= photo.id %>">
+                <img style="width: 100%" src="<%= photo.imageURL%>"> 
                 </a>
               </div>
               <div class="col-sm-4 collapse" id="collapse_<%= photo.id%>" style="
@@ -55,7 +33,7 @@
                 opacity: 0.6;
                 margin: -78px 0px 0px 0px; 
                 position: absolute;
-                width:150px;
+                width: 200px;
                 height: 60px">
                 <div class="display-3 lead text-center" style="margin-bottom: 0px"> <%= photo.title%> </div>
                 <div class="display-4 lead text-center" style="margin-bottom: 0px"> <%= photo.taken %> </div>
@@ -76,7 +54,7 @@
             <div class="col-lg-4 col-md-4 col-xs-6">
               <div class="collapse-group" style="margin-bottom: 20px; overflow: hidden">
                 <a class="text-center" data-parent="#accordion2" data-toggle="collapse" data-target="#collapse2_<%= bike.id %>">
-                <img style="width: 90%" src="<%= bike.imageURL%>"> 
+                <img style="width: 100%" src="<%= bike.imageURL%>"> 
                 </a>
               </div>
               <div class="col-sm-4 collapse" id="collapse2_<%= bike.id%>" style="
@@ -84,7 +62,7 @@
                 opacity: 0.6;
                 margin: -78px 0px 0px 0px; 
                 position: absolute;
-                width:340px;
+                width: 93%;
                 height: 60px">
                 <div class="display-3 lead text-center" style="margin-bottom: 0px"> <%= bike.name %> </div>
                 <div class="display-4 lead text-center" style="margin-bottom: 0px"> <%= bike.buildDate.strftime('%B %Y') %> </div>
