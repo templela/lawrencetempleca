@@ -1,4 +1,5 @@
 <%= javascript_include_tag "scroll.js" %>
+<%= stylesheet_link_tag "hobbyImg.css" %>
 
 <body style="background-color: #181818">
   <div class="" style="margin: 20px;">
@@ -14,27 +15,19 @@
         and
         <a onclick="smoothScroll(document.getElementById('spacerPaint'))">paintings</a>
       </div>
+
       <h1 class="lead" id="spacerPhoto" style="color: white; font-size: 50px; margin: 0px">
         Photography
       </h1>
-
-      <div class="col-sm-12 panel-group" id="accordion1">
-        <div class="panel" style="background-color: #181818;">
+      <div class="col-sm-12">
+        <div class="" style="background-color: #181818;">
           <div class="col-sm-12">
             <% @photos.each do |photo| %>
-            <div class="col-lg-4 col-md-4 col-xs-6">
-              <div class="collapse-group" style="margin-bottom: 20px; overflow: hidden">
-                <a class="text-center" data-parent="#accordion1" data-toggle="collapse" data-target="#collapse_<%= photo.id %>">
+            <div class="hobbyImg col-lg-4 col-md-4 col-xs-6" style="margin-bottom: 20px; overflow: hidden">
+              <a class="text-center">
                 <img style="width: 100%" src="<%= photo.imageURL%>"> 
-                </a>
-              </div>
-              <div class="col-sm-4 collapse" id="collapse_<%= photo.id%>" style="
-                background: none repeat scroll 0 0 #FFFFFF;
-                opacity: 0.6;
-                margin: -78px 0px 0px 0px; 
-                position: absolute;
-                width: 200px;
-                height: 60px">
+              </a>
+              <div class="col-sm-4 hobbyImg_hover">
                 <div class="display-3 lead text-center" style="margin-bottom: 0px"> <%= photo.title%> </div>
                 <div class="display-4 lead text-center" style="margin-bottom: 0px"> <%= photo.taken %> </div>
               </div>
@@ -43,28 +36,21 @@
           </div>
         </div>
       </div>
-      <div id="spacerBikes" class="col-sm-12"></div>
-      <h1 class="lead" id="bikes" style="color: white; font-size: 50px; margin: 0px">
-        Building and Restoring Bikes
+
+
+      <h1 class="lead" id="spacerBikes" style="color: white; font-size: 50px; margin: 0px">
+         Building and Restoring Bikes
       </h1>
-      <div class="col-sm-12 panel-group" id="accordion2">
-        <div class="panel" style="background-color: #181818;">
+      <div class="col-sm-12">
+        <div class="" style="background-color: #181818;">
           <div class="col-sm-12">
             <% @bikes.each do |bike| %>
-            <div class="col-lg-4 col-md-4 col-xs-6">
-              <div class="collapse-group" style="margin-bottom: 20px; overflow: hidden">
-                <a class="text-center" data-parent="#accordion2" data-toggle="collapse" data-target="#collapse2_<%= bike.id %>">
+            <div class="hobbyImg col-lg-4 col-md-4 col-xs-6" style="margin-bottom: 20px; overflow: hidden">
+              <a class="text-center">
                 <img style="width: 100%" src="<%= bike.imageURL%>"> 
-                </a>
-              </div>
-              <div class="col-sm-4 collapse" id="collapse2_<%= bike.id%>" style="
-                background: none repeat scroll 0 0 #FFFFFF;
-                opacity: 0.6;
-                margin: -78px 0px 0px 0px; 
-                position: absolute;
-                width: 93%;
-                height: 60px">
-                <div class="display-3 lead text-center" style="margin-bottom: 0px"> <%= bike.name %> </div>
+              </a>
+              <div class="col-sm-4 hobbyImg_hover" style="width: 80%;">
+                <div class="display-3 lead text-center" style="margin-bottom: 0px"> <%= bike.name%> </div>
                 <div class="display-4 lead text-center" style="margin-bottom: 0px"> <%= bike.buildDate.strftime('%B %Y') %> </div>
               </div>
             </div>
@@ -72,6 +58,7 @@
           </div>
         </div>
       </div>
+
       <div id="spacerPaint" class="col-sm-12"></div>
     </div>
   </div>
