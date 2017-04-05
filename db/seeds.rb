@@ -28,7 +28,7 @@ Project.create(
   description: 'CSC476 - Developed compiler in C for MiniGSL.')
 Project.create( 
   title: 'Custom Processor From Layout',   
-  imageURL: 'http://i.imgur.com/9Ko80HE.gif', 
+  imageURL: 'http://i.imgur.com/u5Hrwcp.gif', 
   startDate: '01/01/2015', endDate: '01/04/2015', 
   description: 'ECE451 - ')
 Project.create( 
@@ -43,7 +43,7 @@ Project.create(
   description: 'ECE342 - ')
 Project.create( 
   title: 'Medical Server for Ontario EHealth', 
-  imageURL: 'http://i.imgur.com/SJxo9xw.png', 
+  imageURL: 'http://i.imgur.com/z8wHWCZ.png', 
   startDate: '01/01/2014', endDate: '01/04/2014', 
   description: 'ECE297 - ')
 Project.create( 
@@ -131,7 +131,7 @@ Skill.create(
   imageURL: 'http://i.imgur.com/JDUdZcO.png',
   learnt: '01/09/2011')
 Skill.create(
-  name: 'Pyhton',
+  name: 'Python',
   examples: 'FILL',
   imageURL: 'http://i.imgur.com/L2xVohg.png',
   learnt: '01/09/2011')
