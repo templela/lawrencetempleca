@@ -1,4 +1,5 @@
 <%= javascript_include_tag "fade.js" %>
+<%= javascript_include_tag "scroll.js" %>
 
 <body style="background-color: #181818">
   <div style="margin: 20px;">
@@ -23,7 +24,7 @@
               <% @projects.each do |project| %>
               <div class="col-lg-3 col-md-4 col-xs-6 collapse-group" style="margin-bottom: 0px; width: 210px; height: 210px; overflow: hidden">
                 <a class="text-center" data-parent="#accordion" data-toggle="collapse" data-target="#<%= project.id %>">
-                <img style="width: 95%" src="<%= project.imageURL%>"> 
+                <img class="img-thumbnail" onclick="smoothScroll(document.getElementById('projects'))" style="width: 95%; background-color: #181818" src="<%= project.imageURL%>"> 
                 </a>
               </div>
               <% end %>
