@@ -1,37 +1,40 @@
 <%= javascript_include_tag "scroll.js" %>
 <%= stylesheet_link_tag "hobbyImg.css" %>
-
-<body style="background-color: #181818">
+<body class="hobbies" style="background-color: #181818">
   <div style="margin: 20px;">
     <div class="col-md-12" style="background-color: #181818;">
-      
-      <div id="hobbiesHeader" class="col-sm-12"> 
+      <div id="hobbiesHeader" class="col-sm-12">
         <h1 class="lead" style="color: white; font-size: 50px; margin: 0px">
           Other Personal Projects
         </h1>
         <div class="lead" style="color: #888888; margin-left: 20px">
           Sometimes I'm not software dev'ing. So I keep a few projects on the side like 
           <a onclick="smoothScroll(document.getElementById('spacerPhoto'))">photography</a>,
-          <a onclick="smoothScroll(document.getElementById('spacerBikes'))">bicycles</a>, and
-          <a onclick="smoothScroll(document.getElementById('spacerPaint'))">painting</a> .
+          <a onclick="smoothScroll(document.getElementById('spacerBikes'))">working with bikes</a>, and
+          <a onclick="smoothScroll(document.getElementById('spacerPaint'))">painting</a>.
+          <p>
+          I believe having creative outlets is necessary for a balanced life.
         </div>
       </div>
-
       <div class="col-sm-12">
-        <hr class="my-2" style="margin-bottom: 20px;">
+        <hr class="my-2" style="margin-bottom: 20px; margin-top: 10px">
       </div>
-
       <div id="photos">
-        <h1 class="lead col-sm-12" id="spacerPhoto" style="color: white; font-size: 50px; margin: 0px">
-          Photography
-        </h1>
+        <div id="photosHeader" class="col-sm-12">
+          <h1 class="lead" id="spacerPhoto" style="color: white; font-size: 50px; margin-bottom: 0px">
+            Photography
+          </h1>
+          <div class="lead" style="color: #888888; margin-left: 20px">
+            I enjoy shooting street photography, abstract geometrics, portraiture, and foggy mornings.
+          </div>
+        </div>
         <div class="col-sm-12">
           <div class="" style="background-color: #181818;">
             <div class="col-sm-12">
               <% @photos.each do |photo| %>
               <div class="hobbyImg col-lg-4 col-md-4 col-xs-6" style="margin-bottom: 20px; overflow: hidden">
                 <a class="text-center" style="width: 100%">
-                 <img style="width: 100%" src="<%= photo.imageURL%>">
+                <img style="width: 100%" src="<%= photo.imageURL%>">
                 </a>
                 <div class="col-sm-4 hobbyImg_hover">
                   <div class="display-3 lead text-center" style="margin-bottom: 0px"> <%= photo.title%> </div>
@@ -43,59 +46,66 @@
           </div>
         </div>
       </div>
-
       <div class="col-sm-12">
-        <hr class="my-2" style="margin-bottom: 20px;">
+        <hr class="my-2" style="margin-bottom: 20px; margin-top: 10px">
       </div>
-
-      <h1 class="lead col-sm-12" id="spacerBikes" style="color: white; font-size: 50px; margin: 0px">
-         Building and Restoring Bikes
-      </h1>
-      <div class="col-sm-12">
-        <div class="" style="background-color: #181818;">
-          <div class="col-sm-12">
-            <% @bikes.each do |bike| %>
-            <div class="hobbyImg col-lg-4 col-md-4 col-xs-6" style="margin-bottom: 20px; overflow: hidden">
-              <a class="text-center">
+      <div id='bikes'>
+        <div id="bikesHeader" class="col-sm-12">
+          <h1 class="lead" id="spacerBikes" style="color: white; font-size: 50px; margin-bottom: 0px">
+            Building and Restoring Bikes
+          </h1>
+          <div class="lead" style="color: #888888; margin-left: 20px">
+            I work mostly with older road bikes and single speed bikes.
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="" style="background-color: #181818;">
+            <div class="col-sm-12">
+              <% @bikes.each do |bike| %>
+              <div class="hobbyImg col-lg-4 col-md-4 col-xs-6" style="margin-bottom: 20px; overflow: hidden">
+                <a class="text-center">
                 <img style="width: 100%" src="<%= bike.imageURL%>"> 
-              </a>
-              <div class="col-sm-4 hobbyImg_hover" style="width: 80%;">
-                <div class="display-3 lead text-center" style="margin-bottom: 0px"> <%= bike.name%> </div>
-                <div class="display-4 lead text-center" style="margin-bottom: 0px"> <%= bike.buildDate.strftime('%B %Y') %> </div>
+                </a>
+                <div class="col-sm-4 hobbyImg_hover" style="width: 80%;">
+                  <div class="display-3 lead text-center" style="margin-bottom: 0px"> <%= bike.name%> </div>
+                  <div class="display-4 lead text-center" style="margin-bottom: 0px"> <%= bike.buildDate.strftime('%B %Y') %> </div>
+                </div>
               </div>
+              <% end %>
             </div>
-            <% end %>
           </div>
         </div>
       </div>
-
       <div class="col-sm-12">
-        <hr class="my-2" style="margin-bottom: 20px;">
+        <hr class="my-2" style="margin-bottom: 20px; margin-top: 10px">
       </div>
-
-      <h1 class="lead col-sm-12" id="spacerPaint" style="color: white; font-size: 50px; margin: 0px">
-         Painting
-      </h1>
-      <div class="col-sm-12">
-        <div class="" style="background-color: #181818;">
-          <div class="col-sm-12">
-            <% @art.each do |art| %>
-            <div class="hobbyImg col-lg-4 col-md-4 col-xs-6" style="margin-bottom: 20px; overflow: hidden">
-              <a class="text-center">
+      <div id="painting">
+        <div id="paintingHeader" class="col-sm-12">
+          <h1 class="lead" id="spacerPaint" style="color: white; font-size: 50px; margin-bottom: 0px">
+            Painting
+          </h1>
+          <div class="lead" style="color: #888888; margin-left: 20px">
+            Acrylic. Spray paint. Canvas. Tape. 
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="" style="background-color: #181818;">
+            <div class="col-sm-12">
+              <% @art.each do |art| %>
+              <div class="hobbyImg col-lg-4 col-md-4 col-xs-6" style="margin-bottom: 20px; overflow: hidden">
+                <a class="text-center">
                 <img style="width: 100%" src="<%= art.imageURL%>"> 
-              </a>
-              <div class="col-sm-4 hobbyImg_hover" style="width: 80%;">
-                <div class="display-3 lead text-center" style="margin-bottom: 0px"> <%= art.name %> </div>
-                <div class="display-4 lead text-center" style="margin-bottom: 0px"> <%= art.completed.strftime('%B %Y') %> </div>
+                </a>
+                <div class="col-sm-4 hobbyImg_hover" style="width: 80%;">
+                  <div class="display-3 lead text-center" style="margin-bottom: 0px"> <%= art.name %> </div>
+                  <div class="display-4 lead text-center" style="margin-bottom: 0px"> <%= art.completed.strftime('%B %Y') %> </div>
+                </div>
               </div>
+              <% end %>
             </div>
-            <% end %>
           </div>
         </div>
       </div>
-
-
-
       <div class="col-sm-12">
         <hr class="my-2" style="margin-bottom: 80px;">
       </div>

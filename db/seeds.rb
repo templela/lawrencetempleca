@@ -339,7 +339,7 @@ Photo.create(
   taken: "01/02/2015")
 Photo.create(
   title: "gardens",
-  imageURL: "http://i.imgur.com/nB8Beweg.jpg",
+  imageURL: "http://i.imgur.com/57HfUEng.jpg",
   taken: "01/03/2017")
 Photo.create(
   title: "511",
