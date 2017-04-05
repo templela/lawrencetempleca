@@ -8,34 +8,93 @@
 
 Project.create( 
   title: 'Capstone', 
-  imageURL: 'http://i.imgur.com/swpTfh4.jpg', 
+  imageURL: 'http://i.imgur.com/ThpNnLK.jpg', 
   startDate: '01/09/2016', endDate: '28/03/2017', 
-  description: 'Built a capstone device.')
+  description: 'APS490 - Built a capstone device.')
 Project.create( 
   title: 'Portfolio Website', 
-  imageURL: 'http://i.imgur.com/swpTfh4.jpg', 
+  imageURL: 'http://i.imgur.com/uDHtnsK.png', 
   startDate: '01/03/2017', endDate: '05/04/2017', 
-  description: 'Built a website. Rails and stuff. Super Magic.')
+  description: 'APS490 - Built a website. Rails and stuff. Super Magic.')
 Project.create(
   title: 'Cl0ud9', 
   imageURL: 'http://i.imgur.com/aNBluL4.png', 
   startDate: '01/09/2016', endDate: '01/12/2016', 
-  description: 'Built a website. Add cool features.')
+  description: 'CSC444 - Built a website. Add cool features.')
 Project.create( 
-  title: 'Ex1', 
-  imageURL: 'https://i.imgur.com/XPRPxXwh.jpg', 
-  startDate: '01/01/2016', endDate: '20/02/2017', 
-  description: 'lora ipsum. LORA IPSUM? lora ipsum. LORA IPSUM? lora ipsum. LORA IPSUM? lora ipsum. LORA IPSUM? lora ipsum. LORA IPSUM? lora ipsum. LORA IPSUM? lora ipsum. LORA IPSUM? ')
+  title: 'Custom Compiler', 
+  imageURL: 'http://i.imgur.com/mnYvA9B.png', 
+  startDate: '01/09/2015', endDate: '01/12/2015', 
+  description: 'CSC476 - Developed compiler in C for MiniGSL.')
 Project.create( 
-  title: 'Ex2', 
-  imageURL: 'https://i.imgur.com/XPRPxXwh.jpg', 
-  startDate: '01/01/2016', endDate: '20/02/2017', 
-  description: 'lora ipsum. LORA IPSUM? lora ipsum. LORA IPSUM? lora ipsum. LORA IPSUM? lora ipsum. LORA IPSUM? lora ipsum. LORA IPSUM? lora ipsum. LORA IPSUM? lora ipsum. LORA IPSUM? ')
+  title: 'Custom Processor From Layout',   
+  imageURL: 'http://i.imgur.com/9Ko80HE.gif', 
+  startDate: '01/01/2015', endDate: '01/04/2015', 
+  description: 'ECE451 - ')
 Project.create( 
-  title: 'Ex3', 
-  imageURL: 'https://i.imgur.com/XPRPxXwh.jpg', 
-  startDate: '01/01/2016', endDate: '20/02/2017', 
-  description: 'lora ipsum. LORA IPSUM? lora ipsum. LORA IPSUM? lora ipsum. LORA IPSUM? lora ipsum. LORA IPSUM? lora ipsum. LORA IPSUM? lora ipsum. LORA IPSUM? lora ipsum. LORA IPSUM? ')
+  title: 'IRC Chat Client', 
+  imageURL: 'http://i.imgur.com/d4R8Buo.png', 
+  startDate: '01/01/2015', endDate: '01/04/2015', 
+  description: 'ECE361 - ')
+Project.create( 
+  title: 'Custom Processor in Verilog', 
+  imageURL: 'http://i.imgur.com/0X0e44a.jpg', 
+  startDate: '01/01/2015', endDate: '01/04/2015', 
+  description: 'ECE342 - ')
+Project.create( 
+  title: 'Medical Server for Ontario EHealth', 
+  imageURL: 'http://i.imgur.com/SJxo9xw.png', 
+  startDate: '01/01/2014', endDate: '01/04/2014', 
+  description: 'ECE297 - ')
+Project.create( 
+  title: 'Audio Looper in Assembly', 
+  imageURL: 'http://i.imgur.com/kO4L1BH.png', 
+  startDate: '01/01/2014', endDate: '01/04/2014', 
+  description: 'ECE243 - ')
+Project.create( 
+  title: 'Arcade Shooter Videogame in Verilog', 
+  imageURL: 'http://i.imgur.com/IrPoMkS.png', 
+  startDate: '01/09/2013', endDate: '01/12/2013', 
+  description: 'ECE241 - ')
+Project.create( 
+  title: 'Prototype Active Cooling Suit for Firefighters', 
+  imageURL: 'http://i.imgur.com/tJcpBxG.jpg', 
+  startDate: '01/01/2013', endDate: '01/04/2013', 
+  description: 'ESC102 - ')
+Project.create( 
+  title: 'Prototype Washing Up Glove', 
+  imageURL: 'http://i.imgur.com/lCrw5JW.png', 
+  startDate: '01/11/2012', endDate: '01/12/2012', 
+  description: 'ESC101 - ')
+Project.create( 
+  title: 'Proposal for Assistive Carrying Device', 
+  imageURL: 'http://i.imgur.com/Hqql0s9.jpg', 
+  startDate: '01/09/2012', endDate: '01/11/2012', 
+  description: 'ESC101 - ')
+Project.create( 
+  title: 'Bridge Design', 
+  imageURL: 'http://i.imgur.com/vkapoz1.jpg', 
+  startDate: '01/10/2012', endDate: '01/11/2012', 
+  description: 'CIV102 - ')
+Project.create( 
+  title: 'Potential Energy Car', 
+  imageURL: 'http://i.imgur.com/fjNQAEd.jpg', 
+  startDate: '01/09/2011', endDate: '01/10/2011', 
+  description: 'SPH3U1 - ')
+
+Project.create( 
+  title: 'Adventure Game - Great Canadian Appathon', 
+  imageURL: 'http://i.imgur.com/TmTDAvE.jpg', 
+  startDate: '01/01/2014', endDate: '01/01/2014', 
+  description: 'Great Canadian Appathon - ')
+Project.create( 
+  title: 'Light Feature', 
+  imageURL: 'http://i.imgur.com/v4JOQ0M.gif', 
+  startDate: '01/10/2016', endDate: '01/10/2016', 
+  description: 'Arduino - ')
+
+
+
 
 
 Experience.create(  
