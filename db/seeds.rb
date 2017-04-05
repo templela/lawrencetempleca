@@ -25,7 +25,7 @@ Project.create(
   title: 'Custom Compiler', 
   imageURL: 'http://i.imgur.com/mnYvA9B.png', 
   startDate: '01/09/2015', endDate: '01/12/2015', 
-  description: 'Developed compiler in C for MiniGSL across 4 seperate labs. Included Flex and Bison lexical/syntactical analyzers. Custom semantic analyzer. And code generation. For CSC467.')
+  description: 'Developed compiler in C for MiniGSL across 4 separate labs. Included Flex and Bison lexical/syntactical analyzers. Custom semantic analyzer and code generation. For CSC467.')
 Project.create( 
   title: 'Custom Processor From Layout',   
   imageURL: 'http://i.imgur.com/u5Hrwcp.gif', 
@@ -35,17 +35,17 @@ Project.create(
   title: 'IRC Chat Client', 
   imageURL: 'http://i.imgur.com/d4R8Buo.png', 
   startDate: '01/01/2015', endDate: '01/04/2015', 
-  description: 'Developed an IRC chat client in C. Holds up to 20 users per channel, per instance. Has file transfer and private channels. For ECE361')
+  description: 'Developed an IRC chat client in C. Holds up to 20 users per channel, per instance. Has file transfer and private channels. For ECE361.')
 Project.create( 
   title: 'Custom Processor in Verilog', 
   imageURL: 'http://i.imgur.com/0X0e44ag.jpg', 
   startDate: '01/01/2015', endDate: '01/04/2015', 
-  description: 'A 16b processor with Avalon interface and memory interface. Runs on DE2 FPGA. For ECE342')
+  description: 'A 16b processor with Avalon interface and memory interface. Runs on DE2 FPGA. For ECE342.')
 Project.create( 
-  title: 'Medical Server for personal health history', 
+  title: 'Medical Server for Health History', 
   imageURL: 'http://i.imgur.com/z8wHWCZ.png', 
   startDate: '01/01/2014', endDate: '01/04/2014', 
-  description: 'Designed a server infrastructure to store medical records for Ontario EHealth. Developed with agile methodology for engineering design course. Had weekly stakeholder meetings and 3 primary design documents. For ECE297')
+  description: 'Designed a server infrastructure to store medical records for Ontario EHealth. Developed with agile methodology for engineering design course. Had weekly stakeholder meetings and 3 primary design documents. For ECE297.')
 Project.create( 
   title: 'Audio Looper in Assembly', 
   imageURL: 'http://i.imgur.com/kO4L1BH.png', 
@@ -55,7 +55,7 @@ Project.create(
   title: 'Arcade Shooter Videogame in Verilog', 
   imageURL: 'http://i.imgur.com/IrPoMkS.png', 
   startDate: '01/09/2013', endDate: '01/12/2013', 
-  description: 'Designed a videogame running on the Altera DE2 development board. With VGA output and keyboard input. For ECE241')
+  description: 'Designed a videogame running on the Altera DE2 development board. With VGA output and keyboard input. For ECE241.')
 Project.create( 
   title: 'Prototype Active Cooling Suit for Firefighters', 
   imageURL: 'http://i.imgur.com/tJcpBxGg.jpg', 
@@ -65,7 +65,7 @@ Project.create(
   title: 'Prototype Washing Up Glove', 
   imageURL: 'http://i.imgur.com/lCrw5JW.png', 
   startDate: '01/11/2012', endDate: '01/12/2012', 
-  description: 'Designed an intermediate prototype in Solidworks from drawings of specc\'d design. For ESC101.');
+  description: 'Designed an intermediate prototype in Solidworks from initial design specifications. For ESC101.');
 Project.create( 
   title: 'Proposal for Assistive Carrying Device', 
   imageURL: 'http://i.imgur.com/Hqql0s9g.jpg', 
@@ -95,7 +95,7 @@ Project.create(
 
 
 Experience.create(  
-  title: 'Software Engineer Intern', 
+  title: 'Software Engineering Intern', 
   company: 'Nuance Communications Montreal',
   startDate: '01/01/2016', endDate: '01/04/2016',
   imageURL: 'http://i.imgur.com/mcW3Vpc.png',
@@ -107,7 +107,7 @@ Experience.create(
   startDate: '01/04/2015', endDate: '01/09/2015',
   imageURL: 'http://i.imgur.com/mXpHvgd.png',
   technologies: 'Python, Custom TCP/IP and UDP webserver, MUSE SDK',
-  description: 'Designing software for interfacing with medical hardware for post-doctoral students. Duties included managing expensive hardware and delicate software. Learnt Python robustly in a single day for this position. Continue to provide support for software developed there. ')
+  description: 'Designing software for interfacing with medical hardware for post-doctoral fellows. Duties included managing expensive hardware and delicate software. Learnt Python robustly in a single day for this position. Continue to provide support for software developed there. ')
 Experience.create(  
   title: 'Volunteer Research Assistant', 
   company: 'University of Toronto - Human Factors and Applied Statistics Lab',
