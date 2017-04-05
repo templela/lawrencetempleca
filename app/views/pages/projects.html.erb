@@ -15,7 +15,7 @@
             Projects
           </h1>   
           <div class="lead" style="color: #888888; margin-left: 20px">
-            Most of my projects reveolve around software. Some have hardware. All are devoutly engineered.
+            Most of my projects revolve around software. Always excited about new technologies. Development in back, mid and occasionally front end. Low level development with some development kits and hobbiest platforms. All my projects adhere to a general set of engineering and design priciples to ensure quality and confidence of complete design.  
           </div>
           <div id="mouseover1" style="padding-bottom: 20px">
             <i style="color: #181818">s</i>
@@ -43,7 +43,10 @@
                 <%= project.endDate.strftime('%B %Y') %>
               </div>
               <div>
-                <%= project.description %>
+                <%= project.description.html_safe %>
+              </div>
+              <div> 
+                <img style="width:95%; margin-top: 20px" src="<%= project.imageURL %>">
               </div>
             </div>
             <% end %>

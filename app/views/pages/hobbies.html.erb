@@ -7,15 +7,13 @@
       
       <div id="hobbiesHeader" class="col-sm-12"> 
         <h1 class="lead" style="color: white; font-size: 50px; margin: 0px">
-          Hobbies
+          Other Personal Projects
         </h1>
         <div class="lead" style="color: #888888; margin-left: 20px">
-          But blurb here about how some of my projects don't involve coding like
-          <a onclick="smoothScroll(document.getElementById('spacerPhoto'))">photos</a>
-          and
-          <a onclick="smoothScroll(document.getElementById('spacerBikes'))">bikes</a>
-          and
-          <a onclick="smoothScroll(document.getElementById('spacerPaint'))">paintings</a>
+          Sometimes I'm not software dev'ing. So I keep a few projects on the side like 
+          <a onclick="smoothScroll(document.getElementById('spacerPhoto'))">photography</a>,
+          <a onclick="smoothScroll(document.getElementById('spacerBikes'))">bicycles</a>, and
+          <a onclick="smoothScroll(document.getElementById('spacerPaint'))">painting</a> .
         </div>
       </div>
 
@@ -32,12 +30,12 @@
             <div class="col-sm-12">
               <% @photos.each do |photo| %>
               <div class="hobbyImg col-lg-4 col-md-4 col-xs-6" style="margin-bottom: 20px; overflow: hidden">
-                <a class="text-center">
-                  <img style="width: 100%" src="<%= photo.imageURL%>"> 
+                <a class="text-center" style="width: 100%">
+                 <img style="width: 100%" src="<%= photo.imageURL%>">
                 </a>
                 <div class="col-sm-4 hobbyImg_hover">
                   <div class="display-3 lead text-center" style="margin-bottom: 0px"> <%= photo.title%> </div>
-                  <div class="display-4 lead text-center" style="margin-bottom: 0px"> <%= photo.taken %> </div>
+                  <div class="display-4 lead text-center" style="margin-bottom: 0px"> <%= photo.taken.strftime('%B %Y') %> </div>
                 </div>
               </div>
               <% end %>
@@ -50,7 +48,7 @@
         <hr class="my-2" style="margin-bottom: 20px;">
       </div>
 
-      <h1 class="lead" id="spacerBikes" style="color: white; font-size: 50px; margin: 0px">
+      <h1 class="lead col-sm-12" id="spacerBikes" style="color: white; font-size: 50px; margin: 0px">
          Building and Restoring Bikes
       </h1>
       <div class="col-sm-12">
@@ -75,7 +73,27 @@
         <hr class="my-2" style="margin-bottom: 20px;">
       </div>
 
-      <div id="spacerPaint" class="col-sm-12"></div>
+      <h1 class="lead col-sm-12" id="spacerPaint" style="color: white; font-size: 50px; margin: 0px">
+         Painting
+      </h1>
+      <div class="col-sm-12">
+        <div class="" style="background-color: #181818;">
+          <div class="col-sm-12">
+            <% @art.each do |art| %>
+            <div class="hobbyImg col-lg-4 col-md-4 col-xs-6" style="margin-bottom: 20px; overflow: hidden">
+              <a class="text-center">
+                <img style="width: 100%" src="<%= art.imageURL%>"> 
+              </a>
+              <div class="col-sm-4 hobbyImg_hover" style="width: 80%;">
+                <div class="display-3 lead text-center" style="margin-bottom: 0px"> <%= art.name %> </div>
+                <div class="display-4 lead text-center" style="margin-bottom: 0px"> <%= art.completed.strftime('%B %Y') %> </div>
+              </div>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
 
 
       <div class="col-sm-12">

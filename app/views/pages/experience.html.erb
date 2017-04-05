@@ -12,7 +12,7 @@
             Work
           </h1>
           <div class="lead" style="color: #888888; margin-left: 20px">
-            But blurb here about how I work
+            Software Engineer. Creator of unique and innovative solutions. Experience in industry and academia. 
           </div>
           <div id="mouseover1" style="padding-bottom: 20px">
             <i style="color: #181818">!</i>
@@ -31,19 +31,23 @@
               <% end %>
             </div>
             <% @experiences.each do |experience| %> 
-            <div class="col-sm-4 collapse" id="collapse_<%= experience.id%>" style="color: white">
-              <div class="display-3 lead text-center"><%= experience.title%></div>
-              <div class="display-3 lead text-center"><%= experience.company%></div>
-              <div class="lead text-center" style="font-size: 16px">
+            <div class="col-sm-4 collapse" id="collapse_<%= experience.id%>" style="color: white; margin-bottom: 30px">
+              <div class="lead text-center" style="font-size: 28px; font-style: bold">
+                <%= experience.title%>
+              </div>
+              <div class="lead" style="font-size: 18px; font-style: italic">
+                <%= experience.company%>
+              </div>
+              <div class="lead" style="font-size: 16px">
                 <%= experience.startDate.strftime('%B %Y') %>
                 to
                 <%= experience.endDate.strftime('%B %Y') %>
               </div>
-              <div>
-                <%= experience.description %>
+              <div class="lead" style="font-size: 15px">
+                Technologies: <%= experience.technologies %>
               </div>
-              <div>
-                <%= experience.technologies %>
+              <div class="lead" style="font-size: 15px">
+                Description: <%= experience.description %>
               </div>
             </div>
             <% end %>
@@ -61,6 +65,9 @@
           <h1 class="lead" style="color: white; font-size: 50px; margin: 0px">
             Skills
           </h1>
+          <div class="lead" style="color: #888888; margin-left: 20px">
+            A myriad of languages, platforms and paradigms. 
+          </div>
           <div id="mouseover2" style="padding-bottom: 20px">
             <i style="color: #181818">s</i>
             <i class="col-lg-3 col-md-4 col-xs-6" style="color: #666666; padding-left: 20px" id='fade2'>Click for more information</i>
@@ -78,7 +85,7 @@
               <% end %>
             </div>
             <% @skills.each do |skill| %> 
-            <div class="col-sm-4 collapse" id="collapse2_<%= skill.id%>" style="color: white">
+            <div class="col-sm-4 collapse text-center" id="collapse2_<%= skill.id%>" style="color: white">
               <div class="lead text-center" style="font-size: 34px"><%= skill.name%></div>
               <div class="lead text-center" style="font-size: 16px">
                 <% @yearsKnown = "Known for " << (Date.today.year - skill.learnt.year).to_s << " years "%>
@@ -99,10 +106,13 @@
                   end %>
                 <%= @yearText << @monthText %>
               </div>
-              <div>
-                <%= skill.examples %>
+              <div class="lead" style="font-size: 15px">
+                <!--<%= skill.examples %>-->
               </div>
-              <img style="width: 90%; margin-top:25px;" src="<%= skill.imageURL%>">
+              <div class="lead text-center" style="font-size: 15px">
+                Confidence: <%= skill.level %>/10
+              </div>
+              <img class="text-center" style="width: 90%; margin-top:25px" src="<%= skill.imageURL%>">
             </div>
             <% end %>         
           </div>
